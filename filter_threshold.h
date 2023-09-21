@@ -1,0 +1,1 @@
+int threshold(struct image_s *src_image, struct image_s *dst_image, unsigned char value);
