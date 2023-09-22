@@ -1,1 +1,0 @@
-int sobel(struct image_s *src_image, struct image_s *dst_image);

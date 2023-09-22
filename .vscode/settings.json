@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "filter_grayscale.h": "c",
+        "lib_ppm.h": "c",
+        "filter_roberts.h": "c"
+    }
+}

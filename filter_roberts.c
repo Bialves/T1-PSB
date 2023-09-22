@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lib_ppm.h"
-#include "filter_roberts.h"
+#include "./include/lib_ppm.h"
+#include "./include/filter_roberts.h"
 
 int roberts(struct image_s *src_image, struct image_s *dst_image)
 {

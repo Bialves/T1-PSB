@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "lib_ppm.h"
-#include "filter_grayscale.h"
+#include "./include/lib_ppm.h"
+#include "./include/filter_grayscale.h"
 
 int grayscale(struct image_s *src_image, struct image_s *dst_image)
 {

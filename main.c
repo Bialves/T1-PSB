@@ -9,11 +9,11 @@
 
 #include <stdio.h>
 #include <stdint.h>
-#include "lib_ppm.h"
-#include "filter_grayscale.h"
-#include "filter_threshold.h"
-#include "filter_sobel.h"
-#include "filter_roberts.h"
+#include "./include/lib_ppm.h"
+#include "./include/filter_grayscale.h"
+#include "./include/filter_threshold.h"
+#include "./include/filter_sobel.h"
+#include "./include/filter_roberts.h"
 
 struct image_s dataOne;
 struct image_s *input = &dataOne;
@@ -25,7 +25,7 @@ struct image_s *new = &dataNew;
 int main(void)
 {
 	int r;
-	r = read_ppm("images/raposa.ppm", input);
+	r = read_ppm("images/cervo.ppm", input);
 
 	// FILTRO GRAYSCALE
 	if (r == 0) {
@@ -39,9 +39,12 @@ int main(void)
 	}
 
 	// FILTRO THRESHOLD
-	int limiar = 127;
+	int limiar;
 	r = new_ppm(new, input->width, input->height);
 	if (r == 0) {
+		// Coleta o limiar com o usuário
+		printf("\nInforme um limiar: ");
+		scanf("%d", &limiar);
 		int t = threshold(output, new, limiar);
 		if (t == 0) {
 			write_ppm("images/out/threshold.ppm", new);

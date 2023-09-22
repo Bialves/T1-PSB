@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "lib_ppm.h"
-#include "filter_sobel.h"
+#include "./include/lib_ppm.h"
+#include "./include/filter_sobel.h"
 
 int sobel(struct image_s *src_image, struct image_s *dst_image)
 {

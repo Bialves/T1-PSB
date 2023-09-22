@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "lib_ppm.h"
-#include "filter_threshold.h"
+#include "./include/lib_ppm.h"
+#include "./include/filter_threshold.h"
 
 int threshold(struct image_s *src_image, struct image_s *dst_image, unsigned char value)
 {
